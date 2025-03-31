@@ -1,0 +1,49 @@
+# Dependencias de Node
+/node_modules/
+
+# Archivos de configuración de npm
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Archivos generados por Angular CLI
+/dist/
+/out-tsc/
+/.angular/
+
+# Archivos de configuración local
+/.idea/
+/.vscode/
+/.DS_Store
+*.swp
+
+# Archivos de entorno y configuraciones específicas del sistema operativo
+*.log
+*.env
+*.local
+
+# Archivos de test
+/coverage/
+
+# Directorios y archivos generados por build
+build/
+
+# Archivos de seguridad
+/.env
+
+# Archivos de pruebas de compilación
+/.history/
+
+# Directorios y archivos de Angular CLI (si los hubiera)
+.angular-cli.json
+
+# Archivos de la cache del IDE (Ejemplo: IntelliJ, WebStorm, etc.)
+.idea/
+
+# Archivos temporales de macOS
+.DS_Store
+
+# Archivos temporales de Windows
+Thumbs.db
+
