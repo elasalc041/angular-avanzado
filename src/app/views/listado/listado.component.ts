@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Entrada, Entradas } from 'src/app/shared/interfaces/entrada';
 import { EntradaService } from 'src/app/shared/services/entrada.service';
@@ -12,7 +13,9 @@ export class ListadoComponent implements OnInit {
   // Atibutos
   public listadoEntradas: Entrada[];
 
-  constructor(private entradaService: EntradaService) {
+  constructor(private entradaService: EntradaService,
+    private router: Router
+  ) {
     this.listadoEntradas = [ ];
   }
 
@@ -36,8 +39,8 @@ export class ListadoComponent implements OnInit {
     );
   }
 
-  public mostrarTitulo(titulo: string): void {
-    alert(`Entrada seleccionada: ${ titulo }.`);
+  public detalleEntrada(id: number): void {
+    this.router.navigate([`front/detalle-entrada/${id}`]);
   }
 
 }

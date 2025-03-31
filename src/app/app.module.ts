@@ -11,6 +11,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { PaginaNoEncontradaComponent } from './views/pagina-no-encontrada/pagina-no-encontrada.component';
 import { AcercaDeNosotrosComponent } from './views/acerca-de-nosotros/acerca-de-nosotros.component';
 import { LoginComponent } from './views/login/login.component';
+import { EspejoPipe } from './shared/pipes/espejo.pipe';
+import { FrontComponent } from './views/front/front.component';
+import { DetallesEntradaComponent } from './views/detalles-entrada/detalles-entrada.component';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +24,10 @@ import { LoginComponent } from './views/login/login.component';
     EntradaComponent,
     PaginaNoEncontradaComponent,
     AcercaDeNosotrosComponent,
-    LoginComponent
+    LoginComponent,
+    EspejoPipe,
+    FrontComponent,
+    DetallesEntradaComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,24 @@
+<div id="contenedor">
+    <form [formGroup]="formEntrada" (ngSubmit)="editarEntrada()">
+        <label for="">Título:</label>
+        <input type="text" formControlName="titulo">
+        <div *ngIf="formEntrada.get('titulo')?.invalid && formEntrada.get('titulo')?.dirty">
+            <div *ngIf="formEntrada.get('titulo')?.errors?.required">
+                El título es obligatorio
+            </div>
+        </div>
+
+        <label for="">Resumen:</label>
+        <input type="text" formControlName="resumen">
+        <div *ngIf="formEntrada.get('resumen')?.invalid && formEntrada.get('resumen')?.dirty">
+            <div *ngIf="formEntrada.get('resumen')?.errors?.required">
+                El Resumen es obligatorio
+            </div>
+            <div *ngIf="formEntrada.get('resumen')?.errors?.minLength">
+                El Resumen mínimo 10 caracteres
+            </div>
+        </div>
+
+        <button type="submit" [disabled]="!formEntrada.valid">Editar</button>
+    </form>
+</div>

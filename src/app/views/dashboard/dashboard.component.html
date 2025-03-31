@@ -1,0 +1,18 @@
+<div id="contenedor">
+    <table>
+        <thead>
+            <th>Id</th>
+            <th>Títiulo</th>
+            <th>Autor</th>
+            <th>Fecha</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let entrada of listadoEntradas" routerLink="editar-entrada/{{ entrada.id }}">
+                <td>{{ entrada.id}}</td>
+                <td>{{ entrada.titulo}}</td>
+                <td>{{ entrada.resumen }}</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
